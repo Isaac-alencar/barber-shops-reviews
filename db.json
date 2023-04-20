@@ -1,50 +1,62 @@
 {
   "barbersshop": [
     {
+      "id": 1,
       "name": "Game Day Barber",
       "address": "890 Wuckert Overpass, Royal Court"
     },
     {
+      "id": 2,
       "name": "Straight Razors",
       "address": "511 Gibson Village, Summer Square"
     },
     {
+      "id": 3,
       "name": "Muscle Cuts",
       "address": "32594 Hermiston Prairie, Willow Acres"
     },
     {
+      "id": 4,
       "name": "Bulls & Barbers",
       "address": "2182 Rosenbaum Ferry, Summer Estates"
     },
     {
+      "id": 5,
       "name": "Razor Cuts",
       "address": "16175 Darcy Ridges, Summer Village"
     },
     {
+      "id": 6,
       "name": "Razor King",
       "address": "279 Larson Freeway, University Acres"
     },
     {
-      "name": "",
+      "id": 7,
+      "name": "Razor Brooklyn King",
       "address": "72591 Jerry Turnpike, Autumn Creek"
     },
     {
+      "id": 8,
       "name": "Backyard Barbers",
       "address": "579 Remona Underpass, Royal Crossing"
     },
     {
+      "id": 9,
       "name": "Baseline Barbers",
       "address": "99171 Doretta Way, University Creek"
     },
     {
+      "id": 10,
       "name": "Silver Bullet Barbers",
       "address": "70844 Larry Spur, Royal Pointe"
     },
     {
+      "id": 11,
       "name": "Bolt Barbers",
       "address": "137 Alana Gardens, Autumn Gardens"
     },
     {
+      "id": 12,
       "name": "Lucky Barbers",
       "address": "76910 O'Kon Place, Pine Heights"
     }
