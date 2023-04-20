@@ -15,7 +15,7 @@ type BarberShop = {
 };
 
 export default function Home() {
-  const [barbersShop, setBarbersShop] = useState<BarberShop[]>();
+  const [barberShops, setBarberShops] = useState<BarberShop[]>();
   const [isLoading, setIsLoading] = useState<boolean>();
   const [error, setError] = useState<string>();
 
@@ -25,7 +25,7 @@ export default function Home() {
     fetchBarbersShop()
       .then((data) => {
         setIsLoading(false);
-        setBarbersShop(data);
+        setBarberShops(data);
       })
       .catch((error) => {
         setIsLoading(false);
@@ -40,7 +40,7 @@ export default function Home() {
     <>
       {isLoading && <Loading />}
       {error && <Error />}
-      {barbersShop && (
+      {barberShops && (
         <>
           <Head>
             <title>Barbershop Reviews | Home </title>
@@ -48,7 +48,7 @@ export default function Home() {
           <main className={styles.container}>
             <h1>BarbersShop Review</h1>
             <div className={styles.barbersShopList}>
-              {barbersShop.map(({ address, name, id }) => {
+              {barberShops.map(({ address, name, id }) => {
                 return (
                   <div className={styles.card} key={id}>
                     <strong className={styles.name}>{name}</strong>
