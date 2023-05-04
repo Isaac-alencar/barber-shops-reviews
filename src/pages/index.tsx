@@ -1,10 +1,10 @@
-import Head from "next/head";
 import { useEffect, useState } from "react";
 
 import { fetchBarbersShop } from "@/infra/fetchBarbersShop";
 
 import Loading from "@/components/Loading";
 import Error from "@/components/Error";
+import { useFetch } from "@/hooks/useFetch";
 
 import styles from "../styles/pages/Home.module.css";
 
@@ -14,52 +14,31 @@ type BarberShop = {
   address: string;
 };
 
+const BarberShopList = ({ barberShops }: { barberShops: BarberShop[] }) =>
+  <>{barberShops.map(({ address, name, id }) => {
+    return (
+      <div className={styles.card} key={id}>
+        <strong className={styles.name}>{name}</strong>
+        <span className={styles.address}>{address}</span>
+      </div>
+    );
+  })}</>
+
 export default function Home() {
-  const [barberShops, setBarberShops] = useState<BarberShop[]>();
-  const [isLoading, setIsLoading] = useState<boolean>();
-  const [error, setError] = useState<string>();
+  const {
+    data: barberShops,
+    error,
+    isLoading
+  } = useFetch({ queryFunction: fetchBarbersShop });
 
-  useEffect(() => {
-    setIsLoading(true);
-
-    fetchBarbersShop()
-      .then((data) => {
-        setIsLoading(false);
-        setBarberShops(data);
-      })
-      .catch((error) => {
-        setIsLoading(false);
-        setError((error as Error).message);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
-  }, []);
+  if (error) return <Error />
 
   return (
-    <>
-      {isLoading && <Loading />}
-      {error && <Error />}
-      {barberShops && (
-        <>
-          <Head>
-            <title>Barbershop Reviews | Home </title>
-          </Head>
-          <main className={styles.container}>
-            <h1>BarbersShop Review</h1>
-            <div className={styles.barbersShopList}>
-              {barberShops.map(({ address, name, id }) => {
-                return (
-                  <div className={styles.card} key={id}>
-                    <strong className={styles.name}>{name}</strong>
-                    <span className={styles.address}>{address}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </main>
-        </>
-      )}
-    </>
+    <main className={styles.container}>
+      <h1>BarbersShop Review</h1>
+      <div className={styles.barbersShopList}>
+        {isLoading ? <Loading /> : <BarberShopList barberShops={barberShops} />}
+      </div>
+    </main>
   );
 }
