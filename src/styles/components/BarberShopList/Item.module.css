@@ -1,0 +1,18 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--light-grey);
+  border-bottom: 2px solid var(--orange);
+  flex: 1;
+  list-style-type: none;
+}
+
+.name {
+  color: var(--white);
+}
+
+.address {
+  color: var(--grey);
+}

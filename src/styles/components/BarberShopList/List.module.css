@@ -1,0 +1,19 @@
+.barbersShopList {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+
+  margin: 3rem 0;
+}
+
+@media screen and (min-width: 768px) {
+  .barbersShopList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .barbersShopList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
