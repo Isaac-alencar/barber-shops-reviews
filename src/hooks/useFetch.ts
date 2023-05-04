@@ -1,28 +1,33 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
-type UseFetchParams = {
-  queryFunction: () => Promise<any>;
-}
-
-export const useFetch = ({ queryFunction }: UseFetchParams) => {
-  const [data, setData] = useState<[]>([]);
+type UseFetchParams<T> = {
+  queryFunction: () => Promise<T>;
+  initialData: T;
+};
+export const useFetch = <T>({
+  queryFunction,
+  initialData,
+}: UseFetchParams<T>) => {
+  const [data, setData] = useState(initialData);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string>('');
+  const [error, setError] = useState<string>("");
 
   useEffect(() => {
     setIsLoading(true);
 
-    queryFunction().then((data) => {
-      setData(data)
-    }).catch((error) => {
-      setError((error as Error).message);
-    })
-    .finally(() => setIsLoading(false))
+    queryFunction()
+      .then((data) => {
+        setData(data);
+      })
+      .catch((error) => {
+        setError((error as Error).message);
+      })
+      .finally(() => setIsLoading(false));
   }, [queryFunction]);
 
   return {
     data,
     isLoading,
-    error
-  }
-}
+    error,
+  };
+};

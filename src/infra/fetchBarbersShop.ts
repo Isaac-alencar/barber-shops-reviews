@@ -1,6 +1,7 @@
+import { BarberShop } from "@/domain/BarberShop";
 import { apiClient } from "./apiClient";
 
-export const fetchBarbersShop = async () => {
+export const fetchBarbersShop = async (): Promise<BarberShop[]> => {
   try {
     const response = await apiClient().get("/barbershops");
 
