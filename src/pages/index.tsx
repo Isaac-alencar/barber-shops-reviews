@@ -3,7 +3,8 @@ import { fetchBarbersShop } from "@/infra/fetchBarbersShop";
 
 import Error from "@/components/Error";
 import Loading from "@/components/Loading";
-import BarberShopList from "@/components/BarberShopList";
+
+import { BarberShopList } from "@/components/BarberShopList";
 
 import styles from "../styles/pages/Home.module.css";
 
@@ -12,7 +13,10 @@ export default function Home() {
     data: barberShops,
     error,
     isLoading,
-  } = useFetch({ queryFunction: fetchBarbersShop, initialData: [] });
+  } = useFetch({
+    queryFunction: fetchBarbersShop,
+    initialData: [],
+  });
 
   if (error) return <Error />;
 
