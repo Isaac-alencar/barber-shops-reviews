@@ -2,7 +2,7 @@ import { render, within } from "@testing-library/react";
 import Home from "@/pages/";
 
 import { useFetch } from "@/hooks/useFetch";
-jest.mock("../../../hooks/useFetch");
+jest.mock("../../hooks/useFetch");
 
 type useFetchType = typeof useFetch;
 type useFetchReturnType = ReturnType<useFetchType>;
@@ -78,14 +78,14 @@ describe("<Home />", () => {
     });
 
     it("renders the Loading component", () => {
-      const { getAllByRole } = render(<Home />);
+      const { getByRole } = render(<Home />);
 
-      const loadingText = getAllByRole("heading", {
-        level: 1,
+      const loadingText = getByRole("heading", {
+        level: 2,
       });
 
-      expect(loadingText[1]).toBeInTheDocument();
-      expect(loadingText[1].textContent).toEqual("Loading...");
+      expect(loadingText).toBeInTheDocument();
+      expect(loadingText.textContent).toEqual("Loading...");
     });
   });
 
@@ -98,9 +98,9 @@ describe("<Home />", () => {
     });
 
     it("renders the Error component", () => {
-      const { queryByRole } = render(<Home />);
+      const { getByRole } = render(<Home />);
 
-      const errorMsg = queryByRole("heading", { level: 1 });
+      const errorMsg = getByRole("heading", { level: 2 });
 
       expect(errorMsg?.textContent).toEqual("Something went wrong :/");
     });
