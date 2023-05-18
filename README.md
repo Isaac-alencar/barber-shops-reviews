@@ -13,7 +13,7 @@ pnpm dev
 ```
 
 Second, you have to run the json-server command to live our fake back-end:  
-**This will open our "API server" which you should run in a different terminal window than the serve for next**
+**This will open our "API server" which you should run in a different terminal window than the server for next**
 
 ```bash
 npm run server
