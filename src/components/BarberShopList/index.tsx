@@ -5,6 +5,6 @@ type BarberShopListProps = {
   barberShops: BarberShop[];
 };
 
-export default function BarberShopList({ barberShops }: BarberShopListProps) {
+export const BarberShopList = ({ barberShops }: BarberShopListProps) => {
   return <List list={barberShops} />;
-}
+};
