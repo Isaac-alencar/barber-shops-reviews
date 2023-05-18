@@ -7,10 +7,12 @@ type ListComponent<T> = {
   list: T[];
 };
 
-export const List = <T extends BarberShop>({ list }: ListComponent<T>) => (
-  <ul className={styles.barbersShopList}>
-    {list.map((items: T) => {
-      return <Item {...items} key={items.id} />;
-    })}
-  </ul>
-);
+export const List = <T extends BarberShop>({ list }: ListComponent<T>) => {
+  return (
+    <ul className={styles.barbersShopList}>
+      {list.map((items: T) => {
+        return <Item {...items} key={items.id} />;
+      })}
+    </ul>
+  );
+};
