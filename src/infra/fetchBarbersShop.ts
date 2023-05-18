@@ -3,7 +3,9 @@ import { apiClient } from "./apiClient";
 
 export const fetchBarbersShop = async (): Promise<BarberShop[]> => {
   try {
-    const response = await apiClient().get("/barbershops");
+    const { get } = apiClient();
+
+    const response = await get("/barbershops");
 
     return response.data;
   } catch (error) {
