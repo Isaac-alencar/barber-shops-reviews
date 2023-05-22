@@ -18,6 +18,12 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.config.mjs"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "jest.config.mjs",
+    "./src/tests/setupTests.ts"
+  ],
+  "exclude": ["node_modules", "cypress.config.ts", "cypress", "**/*.cy.tsx"]
 }

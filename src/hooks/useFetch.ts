@@ -19,8 +19,8 @@ export const useFetch = <T>({
       .then((data) => {
         setData(data);
       })
-      .catch((error) => {
-        setError((error as Error).message);
+      .catch((error: Error) => {
+        setError(error.message);
       })
       .finally(() => setIsLoading(false));
   }, [queryFunction]);

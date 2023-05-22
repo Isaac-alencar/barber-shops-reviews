@@ -58,13 +58,13 @@ describe("<Home />", () => {
       const barberListItem = within(barberList).getAllByRole("listitem");
 
       expect(barberListItem).toHaveLength(3);
-      expect(barberListItem[0].textContent).toEqual(
+      expect(barberListItem[0]).toHaveTextContent(
         "Game Day Barber890 Wuckert Overpass, Royal Court"
       );
-      expect(barberListItem[1].textContent).toEqual(
+      expect(barberListItem[1]).toHaveTextContent(
         "Straight Razors511 Gibson Village, Summer Square"
       );
-      expect(barberListItem[2].textContent).toEqual(
+      expect(barberListItem[2]).toHaveTextContent(
         "Muscle Cuts32594 Hermiston Prairie, Willow Acres"
       );
     });
@@ -102,7 +102,7 @@ describe("<Home />", () => {
 
       const errorMsg = getByRole("heading", { level: 2 });
 
-      expect(errorMsg?.textContent).toEqual("Something went wrong :/");
+      expect(errorMsg).toHaveTextContent("Something went wrong :/");
     });
   });
 });
