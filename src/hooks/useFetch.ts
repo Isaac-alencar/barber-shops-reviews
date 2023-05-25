@@ -1,33 +1,34 @@
-import { useEffect, useState } from "react";
+import { useEffect, useReducer } from 'react';
+
+import { ACTION_KIND, factoryFetchReducer } from '@/reducers/fetchReducer';
 
 type UseFetchParams<T> = {
   queryFunction: () => Promise<T>;
   initialData: T;
 };
+
 export const useFetch = <T>({
   queryFunction,
   initialData,
 }: UseFetchParams<T>) => {
-  const [data, setData] = useState(initialData);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string>("");
+  const { InitialState, fetchReducer } = factoryFetchReducer(initialData);
+  const [state, dispatch] = useReducer(fetchReducer, InitialState);
 
   useEffect(() => {
-    setIsLoading(true);
+    dispatch({ type: ACTION_KIND.FETCH_START });
 
     queryFunction()
       .then((data) => {
-        setData(data);
+        dispatch({ type: ACTION_KIND.FETCH_SUCCESS, payload: data });
       })
-      .catch((error: Error) => {
-        setError(error.message);
-      })
-      .finally(() => setIsLoading(false));
+      .catch((error) => {
+        dispatch({ type: ACTION_KIND.FETCH_ERROR, payload: error.message });
+      });
   }, [queryFunction]);
 
   return {
-    data,
-    isLoading,
-    error,
+    data: state.data,
+    isLoading: state.isLoading,
+    error: state.error,
   };
 };
