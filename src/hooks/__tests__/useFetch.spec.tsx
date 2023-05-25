@@ -1,5 +1,5 @@
 import { act, renderHook, waitFor } from "@testing-library/react";
-import { useFetch } from "../useFetch";
+import { useFetch } from "../useFetch/useFetch";
 
 describe("useFetch", () => {
   describe("When successfully fetches the API", () => {

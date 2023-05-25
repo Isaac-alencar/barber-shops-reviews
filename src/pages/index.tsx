@@ -1,4 +1,4 @@
-import { useFetch } from "@/hooks/useFetch";
+import { useFetch } from "@/hooks/useFetch/useFetch";
 import { fetchBarbersShop } from "@/infra/fetchBarbersShop";
 
 import Error from "@/components/Error";
