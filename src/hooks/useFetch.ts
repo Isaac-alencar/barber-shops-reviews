@@ -1,6 +1,6 @@
 import { useEffect, useReducer } from 'react';
 
-import { ACTION_KIND, factoryFetchReducer } from '@/reducers/fetchReducer';
+import { ACTION_KIND, fetchReducer } from '@/reducers/fetchReducer';
 
 type UseFetchParams<T> = {
   queryFunction: () => Promise<T>;
@@ -11,8 +11,13 @@ export const useFetch = <T>({
   queryFunction,
   initialData,
 }: UseFetchParams<T>) => {
-  const { InitialState, fetchReducer } = factoryFetchReducer(initialData);
-  const [state, dispatch] = useReducer(fetchReducer, InitialState);
+  const initialState = {
+    isLoading: false,
+    data: initialData,
+    error: '',
+  };
+
+  const [state, dispatch] = useReducer(fetchReducer<T>, initialState);
 
   useEffect(() => {
     dispatch({ type: ACTION_KIND.FETCH_START });
