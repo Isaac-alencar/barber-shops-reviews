@@ -5,9 +5,9 @@ export const fetchBarbersShop = async (): Promise<BarberShop[]> => {
   try {
     const { get } = apiClient();
 
-    const response = await get("/barber_shops");
+    const response = await get("/barbershops");
 
-    return response.data.allBarberShops;
+    return response.data;
   } catch (error) {
     throw new Error((error as Error).message);
   }
