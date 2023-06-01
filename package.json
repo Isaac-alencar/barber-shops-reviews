@@ -2,6 +2,9 @@
   "name": "barber-review",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "18.13.0"
+  },
   "scripts": {
     "dev": "next dev",
     "server": "json-server -p 3001 --watch db.json",
