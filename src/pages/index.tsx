@@ -1,12 +1,12 @@
-import { useFetch } from "@/hooks/useFetch";
-import { fetchBarbersShop } from "@/infra/fetchBarbersShop";
+import { useFetch } from '@/hooks/useFetch';
+import { fetchBarbersShop } from '@/infra/fetchBarbersShop';
 
-import Error from "@/components/Error";
-import Loading from "@/components/Loading";
+import Error from '@/components/Error';
+import Loading from '@/components/Loading';
 
-import { BarberShopList } from "@/components/BarberShopList";
+import { BarberShopList } from '@/components/BarberShopList';
 
-import styles from "../styles/pages/Home.module.css";
+import styles from '../styles/pages/Home.module.css';
 
 export default function Home() {
   
