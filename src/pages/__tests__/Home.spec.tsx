@@ -102,7 +102,8 @@ describe("<Home />", () => {
 
       const errorMsg = getByRole("heading", { level: 2 });
 
-      expect(errorMsg).toHaveTextContent("Something went wrong :/");
+      // expect(errorMsg).toHaveTextContent("Something went wrong :/");
+      expect(errorMsg).toHaveTextContent("Broken this test");
     });
   });
 });
