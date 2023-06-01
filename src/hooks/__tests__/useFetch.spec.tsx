@@ -21,7 +21,7 @@ describe("useFetch", () => {
     });
   });
 
-  describe.only("When the API request fails", () => {
+  describe("When the API request fails", () => {
     it("should return an error message", async () => {
       const queryFn = jest
         .fn()

@@ -2,7 +2,7 @@ import { render, within } from "@testing-library/react";
 import Home from "@/pages/";
 
 import { useFetch } from "@/hooks/useFetch";
-jest.mock("../../hooks/useFetch");
+jest.mock("../hooks/useFetch");
 
 type useFetchType = typeof useFetch;
 type useFetchReturnType = ReturnType<useFetchType>;
