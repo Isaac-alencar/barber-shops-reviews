@@ -1,5 +1,5 @@
 import { render, within } from "@testing-library/react";
-import Home from "@/pages/";
+import Home from "../index.page";
 
 import { useFetch } from "@/hooks/useFetch";
 jest.mock("../hooks/useFetch");
