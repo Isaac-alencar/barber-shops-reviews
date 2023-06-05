@@ -1,64 +1,194 @@
 {
-  "barber_shops": [
+  "baber_shops": [
     {
-      "id": 1,
-      "name": "Game Day Barber",
-      "address": "890 Wuckert Overpass, Royal Court"
+      "name": "The Hair Hub",
+      "address": "123 Main Street",
+      "perks": [
+        {
+          "icon": "scissors.png",
+          "text": "Free hot towel shave"
+        },
+        {
+          "icon": "razor.png",
+          "text": "Complimentary neck shave"
+        }
+      ],
+      "rating": 4.8,
+      "barbers": [
+        {
+          "name": "John Smith",
+          "photo": "john_smith.jpg"
+        },
+        {
+          "name": "Emily Jones",
+          "photo": "emily_jones.jpg"
+        }
+      ],
+      "reviews": [
+        {
+          "userPhoto": "reviewer1.jpg",
+          "username": "Sarah Johnson",
+          "body": "Fantastic service! Highly recommended."
+        },
+        {
+          "userPhoto": "reviewer1.jpg",
+          "username": "Sarah Johnson",
+          "body": "Fantastic service! Highly recommended."
+        },
+        {
+          "userPhoto": "reviewer1.jpg",
+          "username": "Sarah Johnson",
+          "body": "Fantastic service! Highly recommended."
+        }
+      ]
     },
     {
-      "id": 2,
-      "name": "Straight Razors",
-      "address": "511 Gibson Village, Summer Square"
+      "name": "Style & Grace",
+      "address": "456 Elm Street",
+      "perks": [
+        {
+          "icon": "scissors.png",
+          "text": "Free hot towel shave"
+        },
+        {
+          "icon": "beard.png",
+          "text": "Complimentary beard trim"
+        }
+      ],
+      "rating": 4.5,
+      "barbers": [
+        {
+          "name": "Michael Thompson",
+          "photo": "michael_thompson.jpg"
+        },
+        {
+          "name": "Sophia Martinez",
+          "photo": "sophia_martinez.jpg"
+        }
+      ],
+      "reviews": [
+        {
+          "userPhoto": "reviewer2.jpg",
+          "username": "David Anderson",
+          "body": "Great ambiance and skilled barbers."
+        },
+        {
+          "userPhoto": "reviewer1.jpg",
+          "username": "Sarah Johnson",
+          "body": "Fantastic service! Highly recommended."
+        }
+      ]
     },
     {
-      "id": 3,
-      "name": "Muscle Cuts",
-      "address": "32594 Hermiston Prairie, Willow Acres"
+      "name": "Clip & Trim",
+      "address": "789 Oak Avenue",
+      "perks": [
+        {
+          "icon": "scissors.png",
+          "text": "Free hot towel shave"
+        },
+        {
+          "icon": "comb.png",
+          "text": "Styling consultation"
+        }
+      ],
+      "rating": 4.9,
+      "barbers": [
+        {
+          "name": "Emily Lee",
+          "photo": "emily_lee.jpg"
+        },
+        {
+          "name": "Jacob Johnson",
+          "photo": "jacob_johnson.jpg"
+        }
+      ],
+      "reviews": [
+        {
+          "userPhoto": "reviewer3.jpg",
+          "username": "Jennifer Davis",
+          "body": "Amazing haircut! Will definitely be back."
+        },
+        {
+          "userPhoto": "reviewer2.jpg",
+          "username": "David Anderson",
+          "body": "Great ambiance and skilled barbers."
+        }
+      ]
     },
     {
-      "id": 4,
-      "name": "Bulls & Barbers",
-      "address": "2182 Rosenbaum Ferry, Summer Estates"
+      "name": "The Grooming Gallery",
+      "address": "987 Pine Street",
+      "perks": [
+        {
+          "icon": "razor.png",
+          "text": "Complimentary neck shave"
+        },
+        {
+          "icon": "mustache.png",
+          "text": "Mustache grooming"
+        }
+      ],
+      "rating": 4.7,
+      "barbers": [
+        {
+          "name": "Alex Rodriguez",
+          "photo": "alex_rodriguez.jpg"
+        },
+        {
+          "name": "Olivia Williams",
+          "photo": "olivia_williams.jpg"
+        }
+      ],
+      "reviews": [
+        {
+          "userPhoto": "reviewer4.jpg",
+          "username": "Christopher Wilson",
+          "body": "Top-notch service and friendly staff."
+        },
+        {
+          "userPhoto": "reviewer3.jpg",
+          "username": "Jennifer Davis",
+          "body": "Amazing haircut! Will definitely be back."
+        }
+      ]
     },
     {
-      "id": 5,
-      "name": "Razor Cuts",
-      "address": "16175 Darcy Ridges, Summer Village"
-    },
-    {
-      "id": 6,
-      "name": "Razor King",
-      "address": "279 Larson Freeway, University Acres"
-    },
-    {
-      "id": 7,
-      "name": "Razor Brooklyn King",
-      "address": "72591 Jerry Turnpike, Autumn Creek"
-    },
-    {
-      "id": 8,
-      "name": "Backyard Barbers",
-      "address": "579 Remona Underpass, Royal Crossing"
-    },
-    {
-      "id": 9,
-      "name": "Baseline Barbers",
-      "address": "99171 Doretta Way, University Creek"
-    },
-    {
-      "id": 10,
-      "name": "Silver Bullet Barbers",
-      "address": "70844 Larry Spur, Royal Pointe"
-    },
-    {
-      "id": 11,
-      "name": "Bolt Barbers",
-      "address": "137 Alana Gardens, Autumn Gardens"
-    },
-    {
-      "id": 12,
-      "name": "Lucky Barbers",
-      "address": "76910 O'Kon Place, Pine Heights"
+      "name": "The Modern Man",
+      "address": "654 Maple Lane",
+      "perks": [
+        {
+          "icon": "scissors.png",
+          "text": "Free hot towel shave"
+        },
+        {
+          "icon": "beard.png",
+          "text": "Beard styling"
+        }
+      ],
+      "rating": 5.0,
+      "barbers": [
+        {
+          "name": "Daniel Thompson",
+          "photo": "daniel_thompson.jpg"
+        },
+        {
+          "name": "Sophie Davis",
+          "photo": "sophie_davis.jpg"
+        }
+      ],
+      "reviews": [
+        {
+          "userPhoto": "reviewer5.jpg",
+          "username": "Daniel Thompson",
+          "body": "Absolutely love my new haircut. Thank you!"
+        },
+        {
+          "userPhoto": "reviewer3.jpg",
+          "username": "Jennifer Davis",
+          "body": "Amazing haircut! Will definitely be back."
+        }
+      ]
     }
   ]
 }
