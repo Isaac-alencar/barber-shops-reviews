@@ -1,6 +1,7 @@
 {
-  "baber_shops": [
+  "barber_shops": [
     {
+      "id": 1,
       "name": "The Hair Hub",
       "address": "123 Main Street",
       "perks": [
@@ -43,6 +44,7 @@
       ]
     },
     {
+      "id": 2,
       "name": "Style & Grace",
       "address": "456 Elm Street",
       "perks": [
@@ -80,6 +82,7 @@
       ]
     },
     {
+      "id": 3,
       "name": "Clip & Trim",
       "address": "789 Oak Avenue",
       "perks": [
@@ -117,6 +120,7 @@
       ]
     },
     {
+      "id": 4,
       "name": "The Grooming Gallery",
       "address": "987 Pine Street",
       "perks": [
@@ -154,6 +158,7 @@
       ]
     },
     {
+      "id": 5,
       "name": "The Modern Man",
       "address": "654 Maple Lane",
       "perks": [

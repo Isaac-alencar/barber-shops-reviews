@@ -7,7 +7,7 @@ export const fetchBarbersShop = async (): Promise<BarberShop[]> => {
 
     const response = await get("/barber_shops");
 
-    return response.data.data;
+    return response.data;
   } catch (error) {
     throw new Error((error as Error).message);
   }
